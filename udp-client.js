@@ -12,10 +12,10 @@ let count = 0;
 let totalLatency = 0;
 
 function sendPing() {
-  let start = performance.now();
+  let start = 0;
 
   client.send(MESSAGE, PORT, HOST, (err) => {
-
+    start = performance.now();
     if (err) console.error("Error al enviar:", err);
   });
 
